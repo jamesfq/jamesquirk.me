@@ -12,7 +12,7 @@
 
 .videos {
     width: 300px;
-    background-image: url("assets/images/background.png");
+    border-radius: 10px;
     text-align: center;
 }
 
