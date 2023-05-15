@@ -71,8 +71,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     background-image: url("assets/images/background.png");
-    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 ol, ul {
 	list-style: none;
