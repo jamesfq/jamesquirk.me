@@ -16,8 +16,8 @@
 }
 
 h1 {
-    margin: 0;
-	padding: 100;
+	margin: 20px;
+	padding: 5px;
 	border: 0;
 	font-size: 30px;
 	font-family: "Georgia", monospace;
@@ -27,8 +27,8 @@ h1 {
 }
 
 h2 {
-    margin: 0;
-	padding: 100;
+	margin: 20px;
+	padding: 5px;
 	border: 0;
 	font-size: 25px;
 	font-family: "Georgia", monospace;
@@ -38,8 +38,8 @@ h2 {
 }
 
 h5{
-    margin: 0;
-	padding: 100;
+	margin: 20px;
+	padding: 5px;
 	border: 0;
 	font-size: 16px;
 	font-family: "Georgia", monospace;
@@ -64,12 +64,13 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 100;
+	margin: 20px;
+	padding: 5px;
 	border: 0;
 	font-size: 16px;
 	font-family: "Georgia", monospace;
 	vertical-align: baseline;
+    text-align: center;
 }
 
 /* HTML5 display-role reset for older browsers */
