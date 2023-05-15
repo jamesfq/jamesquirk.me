@@ -11,6 +11,10 @@
     border: solid 2px white;
 }
 
+.images {
+    display: flex;
+}
+
 h1 {
     margin: 0;
 	padding: 20;
