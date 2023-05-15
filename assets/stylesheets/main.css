@@ -4,7 +4,7 @@
 */
 
 .planeImage {
-    visibility: none;
+    display: none;
 }
 
 .images {
