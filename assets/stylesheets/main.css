@@ -1,8 +1,13 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+
+   I pulled this from the guide to HTML/CSS that you provided on the application!
 */
 
+/* 
+* Referenced the following website for use of grid in organization of websites: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+*/
 .images {
     display: grid;
     align-items: center;
@@ -10,11 +15,9 @@
     gap: 5px;
 }
 
-.videos {
-    background-color: white;
-    text-align: center;
-}
-
+/* 
+* Sets the parameters of the header h1 element
+*/
 h1 {
 	margin: 20px;
 	padding: 5px;
@@ -26,6 +29,9 @@ h1 {
     color: white;
 }
 
+/* 
+* Sets the parameters of the header h2 element
+*/
 h2 {
 	margin: 20px;
 	padding: 5px;
@@ -37,6 +43,10 @@ h2 {
     color: white;
 }
 
+/* 
+* Sets the parameters of the header h5 element, but I don't use it as a header.
+* I use this as an asset when I need to write in black text because p is set to write in white.
+*/
 h5{
 	margin: 20px;
 	padding: 5px;
@@ -48,6 +58,9 @@ h5{
     color: black;
 }
 
+/* 
+* Sets the color of p
+*/
 p {
     color: white;
 }
@@ -78,6 +91,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+/* 
+* Here, I also attempted to set a background image but despite countless testing, could not figure out how to do it correctly.
+*/
 body {
 	line-height: 1;
     background-color: black;
