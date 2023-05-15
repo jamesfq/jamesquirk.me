@@ -5,13 +5,13 @@
 
 .images {
     display: grid;
+    align-self: center;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
 
 .videos {
     background-color: white;
-    color: black;
     float: center;
     text-align: center;
 }
@@ -36,6 +36,17 @@ h2 {
 	vertical-align: baseline;
     text-align: center;
     color: white;
+}
+
+h5{
+    margin: 0;
+	padding: 70;
+	border: 0;
+	font-size: 16px;
+	font-family: "Monaco", monospace;
+	vertical-align: baseline;
+    text-align: center;
+    color: black;
 }
 
 p {
