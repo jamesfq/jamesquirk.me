@@ -26,7 +26,6 @@ h1 {
 	font-family: "Monaco", monospace;
 	vertical-align: baseline;
     text-align: center;
-    color: white;
 }
 
 h2 {
@@ -37,7 +36,6 @@ h2 {
 	font-family: "Monaco", monospace;
 	vertical-align: baseline;
     text-align: center;
-    color: white;
 }
 
 html, body, div, span, applet, object, iframe, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,10 +58,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-p {
-    color: white;
-}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -71,7 +65,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #6D6D6D
+    background-color: #b7b0ff
 }
 ol, ul {
 	list-style: none;
