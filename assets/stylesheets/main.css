@@ -13,7 +13,7 @@
 
 h1 {
     margin: 0;
-	padding: 0;
+	padding: 20;
 	border: 0;
 	font-size: 30px;
 	font-family: "Monaco", monospace;
@@ -22,7 +22,7 @@ h1 {
 
 h2 {
     margin: 0;
-	padding: 0;
+	padding: 10;
 	border: 0;
 	font-size: 25px;
 	font-family: "Monaco", monospace;
@@ -42,7 +42,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0;
+	padding: 10;
 	border: 0;
 	font-size: 16px;
 	font-family: "Monaco", monospace;
