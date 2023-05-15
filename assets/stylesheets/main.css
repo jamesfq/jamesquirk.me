@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+.planeImage {
+    visibility: none;
+}
+
 .images {
     display: grid;
     align-items: center;
