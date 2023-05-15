@@ -12,6 +12,15 @@ h1 {
 	vertical-align: baseline;
 }
 
+h2 {
+    margin: 1;
+	padding: 15;
+	border: 5;
+	font-size: 25px;
+	font-family: "Courier New", monospace;
+	vertical-align: baseline;
+}
+
 html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
