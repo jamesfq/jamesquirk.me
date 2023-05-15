@@ -3,14 +3,6 @@
    License: none (public domain)
 */
 
-.background {
-    background-image: url("assets/images/me.png");
-    background-size: 150px;
-    width: 300px;
-    height: auto;
-    border: solid 2px white;
-}
-
 .images {
     float: left;
     width: 50%;
