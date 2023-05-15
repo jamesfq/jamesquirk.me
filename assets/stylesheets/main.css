@@ -4,7 +4,7 @@
 */
 
 .background {
-    background-image: "assets/images/me.png";
+    background-image: url("assets/images/me.png");
     background-size: 150px;
     width: 300px;
     height: auto;
