@@ -1,5 +1,5 @@
 function toggle() {
-    var img1 = document.getElementById("morePlanes");
+    var img1 = document.getElementById("planeImage");
     if (img1.hidden) {
         img1.hidden = !img1.hidden;
     }
