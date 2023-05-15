@@ -5,14 +5,13 @@
 
 .images {
     display: grid;
-    align-self: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
 
 .videos {
     background-color: white;
-    float: center;
     text-align: center;
 }
 
