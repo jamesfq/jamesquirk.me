@@ -98,7 +98,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     background-color: black;
-    background-image: url("assets/images/background.png");
+    background-image: url("background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
