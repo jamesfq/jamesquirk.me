@@ -118,3 +118,36 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.flight {
+	background-color: #52EEF8;
+	color: #00545A;
+	border: none;
+	cursor: pointer;
+
+	/* handle button size */
+	padding: 10px 20px;
+	border-radius: 20px;
+
+	/* handle text */
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+  
+	transition: all 0.3s ease-in-out;  
+
+}
+
+.flight:hover {
+	background-color: #0FE0EA;
+	transform: scale(1.1);
+	}
+  
+.flight:active {
+	background-color: #00A9A9;
+
+}
+
+.hiddenVideo {
+	display: none
+}

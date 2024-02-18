@@ -13,7 +13,6 @@
 
     <!--Relations between the CSS file and the JavaScript file (attempted)-->
     <link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link rel="functions" href="assets/stylesheets/functions.js">
   </head>
   <body>
     <!--Places my name at the top of the page in the h1 font as specified in CSS-->
@@ -62,21 +61,18 @@
     <img src="assets/images/plane.png" style="width:100%">
 
     <p>Here is a video of the first time I flew by myself, back when I was 16 years old!</p>
-    
     <!--Creates a button that stores a link to my videos-->
-    <a href="https://youtu.be/5IejvQq3TUs">
-        <button style="background-color: white; color:black; border-radius: 5px;">Solo landing</button>
-    </a>
+    <button id="flight1" class="flight">Solo Flight</button>
+    <iframe id="vid1" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/5IejvQq3TUs?si=DSa6VLJzeQjeO4M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     <p>And here is a video of the first time I flew a plane at night.</p>
-    <a href="https://youtu.be/B7o22wn-Xgc">
-        <button style="background-color: white; color:black; border-radius: 5px;">Night flight</button>
-    </a>
+    <button id="flight2" class="flight">Night Flight</button>
+    <iframe id="vid2" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/B7o22wn-Xgc?si=P3jzaHfElXfIC3xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     
     <p>My last video is a recording of the first time I flew a helicopter.</p>
-    <a href="https://youtube.com/shorts/qL1c1aY-IBg">
-        <button style="background-color: white; color:black; border-radius: 5px;">Helicopter</button>
-    </a>
+    <button id="flight3" class="flight">Helicopter</button>
+    <br>
+    <iframe id = "vid3" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/qL1c1aY-IBg?si=28-TtGxNPS5B2vWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
     <hr color="black">
@@ -92,6 +88,8 @@
     <a href="https://jamesfq.github.io/jamesquirk.me/">
         <button style="background-color: white; color:black; border-radius: 5px;">Back to top</button>
     </a>
+    
+    <script src="assets/stylesheets/functions.js"></script>
 
   </body>
 </html>
