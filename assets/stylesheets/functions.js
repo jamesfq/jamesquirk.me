@@ -45,3 +45,17 @@ flight3.addEventListener("click", () => {
         button3Hidden = true;
     }
 });
+
+const backToTop = document.getElementById("backtotop")
+const scrollingEnd = document.querySelector(".scrolling")
+
+backToTop.addEventListener("click", () => {
+    backToTop.classList.toggle("scrolling")
+});
+
+backToTop.addEventListener("transitionend", () => {
+    if (backToTop.classList.contains("scrolling")) {
+        window.scrollTo(0,0);
+        backToTop.classList.remove("scrolling")
+    }
+});
