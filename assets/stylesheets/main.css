@@ -13,6 +13,11 @@
     align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
+	border-radius: 25px
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 /* 
@@ -22,8 +27,7 @@ h1 {
 	margin: 20px;
 	padding: 5px;
 	border: 0;
-	font-size: 30px;
-	font-family: "Georgia", monospace;
+	font-size: 180px;
 	vertical-align: baseline;
     text-align: center;
     color: white;
@@ -36,8 +40,7 @@ h2 {
 	margin: 20px;
 	padding: 5px;
 	border: 0;
-	font-size: 25px;
-	font-family: "Georgia", monospace;
+	font-size: 100px;
 	vertical-align: baseline;
     text-align: center;
     color: white;
@@ -51,8 +54,7 @@ h5{
 	margin: 20px;
 	padding: 5px;
 	border: 0;
-	font-size: 16px;
-	font-family: "Georgia", monospace;
+	font-size: 30px;
 	vertical-align: baseline;
     text-align: center;
     color: black;
@@ -62,12 +64,13 @@ h5{
 * Sets the color of p
 */
 p {
-    color: white;
+    font-size: 20px;
+	color: white;
 }
 
-html, body, div, span, applet, object, iframe, h3, h4, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+html, body, div, applet, object, iframe, h3, h4, h6, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -77,11 +80,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 20px;
+	/* margin: 20px; */
 	padding: 5px;
 	border: 0;
 	font-size: 16px;
-	font-family: "Georgia", monospace;
+	font-family: "Courier New", monospace;
 	vertical-align: baseline;
     text-align: center;
 }
@@ -97,7 +100,7 @@ footer, header, hgroup, menu, nav, section {
 */
 body {
 	line-height: 1;
-    background-color: black;
+    background-color: #001502;
     background-image: url("assets/images/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -120,14 +123,14 @@ table {
 }
 
 .myButton {
-	background-color: #52EEF8;
-	color: #00545A;
+	background-color: #3EE94B;
+	color: #005204;
 	border: none;
 	cursor: pointer;
 
 	/* handle button size */
 	padding: 10px 20px;
-	border-radius: 20px;
+	border-radius: 10px;
 
 	/* handle text */
 	font-size: 16px;
@@ -138,29 +141,119 @@ table {
 
 }
 
+#myName {
+	background-color: rgba(0, 41, 4, 1);
+	color: white;
+	width: 100%;
+	position:sticky;
+	top: 0;
+	border: 10px;
+	padding: 10px;
+}
+
 .myButton:hover {
-	background-color: #0FE0EA;
+	background-color: #00AC10;
 	transform: scale(1.1);
 	}
   
 .myButton:active {
-	background-color: #00A9A9;
+	background-color: #008A0D;
+
+}
+
+.topButton {
+	background-color: #3EE94B;
+	color: #005204;
+	border: none;
+	cursor: pointer;
+
+	/* handle button size */
+	padding: 10px 20px;
+	border-radius: 10px;
+
+	/* handle text */
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+  
+	transition: all 0.3s ease-in-out;  
+
+}
+
+.topButton:active {
+	background-color: #008A0D;
 
 }
 
 #backtotop {
-	transition: transform 2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	transform: scale(1)
 }
 
 #backtotop:hover {
 	transform: translateY(-5px);
+	background-color: #00AC10;
 }
 
 #backtotop.scrolling {
-	transform: scale(250) rotate(90deg) translateY(-45%);
+	transition: transform 2s ease-in-out;
+	transform: scale(250) rotate(45deg) translateY(-45%);
 }
 
 .hiddenVideo {
 	display: none
+}
+
+/* Referenced from this website on flexboxes: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px
+}
+
+.container-item {
+	margin: 0px
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	padding: 10px;
+	background: #001502;
+	position: sticky;
+	top: 0;
+}
+  
+.navigation a {
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+	transition: all 0.2s ease-in;
+}
+  
+.navigation a:hover {
+	background: #00AC10;
+}
+
+#research {
+	transition: color 0.2s ease-in-out;
+	color: #3EE94B;
+
+}
+
+#research:hover {
+	color: #00AC10;
+	
+}
+
+#research:active {
+	color: #008A0D
+}
+
+hr {
+	padding:10px;
+	border: 0px
 }

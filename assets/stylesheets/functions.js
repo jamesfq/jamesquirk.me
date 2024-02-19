@@ -59,3 +59,9 @@ backToTop.addEventListener("transitionend", () => {
         backToTop.classList.remove("scrolling")
     }
 });
+
+const research = document.getElementById("research")
+
+research.addEventListener("click", () => {
+    window.open("https://engineering.dartmouth.edu/news/dartmouth-interns-gain-research-experience-at-erdcs-cold-regions-research-and-engineering-laboratory", '_blank');
+});

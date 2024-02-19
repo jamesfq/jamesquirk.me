@@ -16,76 +16,89 @@
   </head>
   <body>
     <!--Places my name at the top of the page in the h1 font as specified in CSS-->
-    <h1>James Quirk</h1>
-    
-    <!--Creates an object that corresponds to the storage of two images-->
-    <!--Inspired by https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
-    <div class="images">
-        <img src="assets/images/me.png" style="width:100%">
-        <img src="assets/images/me3.png" style="width:100%">
-    </div>
 
-    <!--Adds empty lines between my headers-->
-    <hr color="black">
-    <hr color="black">
+    <ul class="navigation">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#aboutMe">About</a></li>
+      <li><a href="#workEd">Work & Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#development">Development</a></li>
+    </ul>
+
+    <section id="home">
+      <hr>
+
+      <h1>James Quirk</h1>
+      <p>james.f.quirk.25@dartmouth.edu</p>
+      <p>Little Rock, AR</p>
+
+      <!--Creates an object that corresponds to the storage of two images-->
+      <!--Inspired by https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
+      <div class="container">
+          <img class="container-item images" src="assets/images/me.png" style="width:45%">
+          <img class="container-item images" src="assets/images/me3.png" style="width:45%">
+      </div>
+    </section>
     
     <!--Creates sub-headers for each section of my bio-->
-    <h2>About Me!</h2>
-    <p>Hey! My name is James Quirk, and I'm originally from Little Rock, Arkansas, but I also lived in Park City, Utah, when I was in elementary and middle school. I love skiing, playing chess, and spending time with my bunny Belinda.</p>
-    
-    <!--Includes an image of me playing chess-->
-    <img src="assets/images/chess.png" style="width:100%">
+    <section id="aboutMe">
+      <hr>
 
-    <hr color="black">
-    <hr color="black">
+      <h2>About Me!</h2>
+      <p>Hey! My name is James Quirk, and I'm originally from Little Rock, Arkansas, but I also lived in Park City, Utah, when I was in elementary and middle school. I love skiing, playing chess, and spending time with my bunny Belinda.</p>
+      
+      <!--Includes an image of me playing chess-->
+      <img class="images" src="assets/images/chess.png" style="width:100%">
+    </section>
 
-    <h2>Work and Education</h2>
-    <p>I attended Bentonville High School, where I graduated in 2021 in the top 1% of my class as a National AP Scholar and National Merit Scholar. I'm a sophomore at Dartmouth College majoring in Engineering Sciences and Computer Science with and minoring in French. I have worked as an engineering intern at the Cold Regions Research Lab in Hanover since January, 2022, specializing in surface characterization.</p> 
-    
-    <img src="assets/images/work.png" style="width:100%">
+    <section id="workEd">
+      <hr>
 
-    <p>You can look at my recognition for my research here:</p>
-    <hr color="black">
-    
-    <!--Attaches attributes to the strings found to the right-->
-    <p><a href="https://engineering.dartmouth.edu/news/dartmouth-interns-gain-research-experience-at-erdcs-cold-regions-research-and-engineering-laboratory">Thayer - Surface Characterization</a></p>
-    <a href="https://www.erdc.usace.army.mil/Media/Images/igphoto/2003014847/">CRREL - Surface Characterization</a>
-    
-    <hr color="black">
-    <hr color="black">
+      <h2>Work and Education</h2>
+      <p>I attended Bentonville High School, where I graduated in 2021 in the top 1% of my class as a National AP Scholar and National Merit Scholar. I'm a sophomore at Dartmouth College majoring in Engineering Sciences and Computer Science with and minoring in French. I have worked as an engineering intern at the Cold Regions Research Lab in Hanover since January, 2022, specializing in surface characterization.</p> 
+      
+      <img class="images" src="assets/images/work.png" style="width:100%">
+  
+      <p>You can look at my recognition for my research <a id="research">here</a>.</p>
+    </section>
 
-    <h2>Skills</h2>
+    <section id="skills">
+      <hr>
 
-    <p>I'm proficient in the coding languages Python, Java, Linux, and C. I am also conversationally fluent in French and completed Dartmouth's beginner track in Japanese. I've also spent my fair share of time in the clouds as a pilot! I earned my Private Pilot's License when I was 17 years old.</p>
-        
-    <img src="assets/images/plane.png" style="width:100%">
+      <h2>Skills</h2>
 
-    <p>Here is a video of the first time I flew by myself, back when I was 16 years old!</p>
-    <!--Creates a button that stores a link to my videos-->
-    <button id="flight1" class="myButton">Solo Flight</button>
-    <iframe id="vid1" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/5IejvQq3TUs?si=DSa6VLJzeQjeO4M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>I'm proficient in the coding languages Python, Java, Bash, and C. I am also conversationally fluent in French and completed Dartmouth's beginner track in Japanese. I've also spent my fair share of time in the clouds as a pilot! I earned my Private Pilot's License when I was 17 years old.</p>
+          
+      <img class="images" src="assets/images/plane.png" style="width:100%">
 
-    <p>And here is a video of the first time I flew a plane at night.</p>
-    <button id="flight2" class="myButton">Night Flight</button>
-    <iframe id="vid2" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/B7o22wn-Xgc?si=P3jzaHfElXfIC3xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    
-    <p>My last video is a recording of the first time I flew a helicopter.</p>
-    <button id="flight3" class="myButton">Helicopter</button>
-    <br>
-    <iframe id = "vid3" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/qL1c1aY-IBg?si=28-TtGxNPS5B2vWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>Here is a video of the first time I flew by myself, back when I was 16 years old!</p>
+      <!--Creates a button that stores a link to my videos-->
+      <button id="flight1" class="myButton">Solo Flight</button>
+      <br>
+      <iframe id="vid1" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/5IejvQq3TUs?si=DSa6VLJzeQjeO4M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+      <p>And here is a video of the first time I flew a plane at night.</p>
+      <button id="flight2" class="myButton">Night Flight</button>
+      <br>
+      <iframe id="vid2" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/B7o22wn-Xgc?si=P3jzaHfElXfIC3xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+      <p>My last video is a recording of the first time I flew a helicopter.</p>
+      <button id="flight3" class="myButton">Helicopter</button>
+      <br>
+      <iframe id = "vid3" class="hiddenVideo" width="560" height="315" src="https://www.youtube.com/embed/qL1c1aY-IBg?si=28-TtGxNPS5B2vWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
 
-    <hr color="black">
-    <hr color="black">
-    
-    <h2>Development</h2>
+    <section id="development">
+      <hr>
 
-    <p>There is nothing I love more than the simultaneous entertainment value and educational value of programming. Computer science provides me with a creative outlet for the ideas of ways to improve society that are constantly bouncing around my head. My favorite aspect of coding is the problem-solving aspect of taking on a new challenge, but it goes beyond learning; it is a means of creating an impact by minimizing inefficiencies or limiting inequity of access to resources through technology, which grows more ubiquitous each day.</p>
-    <hr color="black">
-    <p>I'm excited to be applying for DALI because it allows me to combine my loves for problem-solving and learning with an ability to enact change in a realm beyond Dartmouth.</p>
+      <h2>Development</h2>
+
+      <p>There is nothing I love more than the simultaneous entertainment value and educational value of programming. Computer science provides me with a creative outlet for the ideas of ways to improve society that are constantly bouncing around my head. My favorite aspect of coding is the problem-solving aspect of taking on a new challenge, but it goes beyond learning; it is a means of creating an impact by minimizing inefficiencies or limiting inequity of access to resources through technology, which grows more ubiquitous each day.</p>
+      <p>I'm excited to be applying for DALI because it allows me to combine my loves for problem-solving and learning with an ability to enact change in a realm beyond Dartmouth.</p>
+    </section>
 
     <!--Links the user back to the top of the page via a hyperlink to the website-->
-    <button id="backtotop" class="myButton">Back to top</button>
+    <button id="backtotop" class="topButton">Back to top</button>
 
     
     <script src="assets/stylesheets/functions.js"></script>
