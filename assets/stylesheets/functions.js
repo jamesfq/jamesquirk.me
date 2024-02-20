@@ -1,3 +1,5 @@
+sampleArtist = document.getElementById("sampleArtist")
+
 const flight1 = document.getElementById("flight1")
 const vid1 = document.getElementById("vid1")
 button1Hidden = true
@@ -132,24 +134,20 @@ targets.forEach((target) => {
 const thisTest = document.getElementById("thisTest")
 const artist = document.getElementById("thisRes")
 
-thisTest.addEventListener("click", () => {
-    artist.textContent = "Test"
-});
-
 // following tutorial: https://www.youtube.com/watch?v=1vR3m0HupGI&list=LL&index=1&t=693s
 
 var redirect_uri = "http://127.0.0.1:3000/index.html"
 
-var client_id = "6f1903b8c0f8452ba2bf8fc7b0e0aff6";
-var client_secret = "c4088d41dc9b4317bb30bb73ea71b86b";
+var client_id = "";
+var client_secret = "";
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
-const DEVICES = "https://api.spotify.com/v1/me/playlists"
+const ARTISTS = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10"
 
 function onPageLoad() {
-    client_id = localStorage.getItem("clientId");
-    client_secret = localStorage.getItem("clientSecret");
+    client_id = localStorage.getItem("client_id");
+    client_secret = localStorage.getItem("client_secret");
     access_token = localStorage.getItem("access_token");
     refresh_token = localStorage.getItem("refresh_token");
     if (window.location.search.length > 0) {
@@ -217,31 +215,41 @@ function getCode() {
 }
 
 function requestAuthorization() {
-    localStorage.setItem("clientId", client_id);
-    localStorage.setItem("clientSecret", client_secret);
+    client_id = document.getElementById("client_id").value;
+    client_secret = document.getElementById("client_secret").value;
+    localStorage.setItem("client_id", client_id);
+    localStorage.setItem("client_secret", client_secret);
 
     let url = AUTHORIZE;
     url += "?client_id=" + client_id;
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
     url += "&show_dialog=true";
-    url += "&scope=playlist-read-private playlist-read-collaborative user-read-playback-state";
+    url += "&scope=playlist-read-private playlist-read-collaborative user-read-playback-state user-top-read";
     window.location.href = url;
 
 }
 
-function refreshDevices() {
-    callApi("GET", DEVICES, null, handleDevicesResponse)
+function refreshArtists() {
+    callApi("GET", ARTISTS, null, handleArtistsResponse)
 
 }
 
-function handleDevicesResponse() {
+function handleArtistsResponse() {
     if (this.status == 200) {
         var data = JSON.parse(this.responseText);
         console.log(data);
-        removeAllItems("devices");
-        data.items.forEach(item => addDevice(item));
-        document.getElementById("devices").value=currentPlaylist
+        removeAllItems("artists");
+
+        let node = document.createElement("option");
+        node.value = "Select Artist";
+        node.innerHTML = "Select Artist";
+        document.getElementById("artists").appendChild(node)
+
+        data.items.forEach(item => addArtist(item));
+        document.getElementById("artists").addEventListener("change", function () {
+            inputArtist(data.items[this.selectedIndex - 1]);
+        });
     }
 
     else if (this.status == 401) {
@@ -271,11 +279,11 @@ function callApi (method, url, body, callback){
     xhr.onload = callback;
 }
 
-function addDevice(item) {
+function addArtist(item) {
     let node = document.createElement("option");
     node.value = item.id;
-    node.innerHTML = item.name + " (" + item.tracks.total + ")";
-    document.getElementById("devices").appendChild(node)
+    node.innerHTML = item.name;
+    document.getElementById("artists").appendChild(node)
 }
 
 function removeAllItems(elementId) {
@@ -285,8 +293,9 @@ function removeAllItems(elementId) {
     }
 }
 
-
-
-
-
-// songs
+function inputArtist(item) {
+    if (item.id != "Select Artist") {
+        sampleArtist.src = `https://open.spotify.com/embed/artist/${item.id}`;
+        sampleArtist.height = 352;
+    }
+ }

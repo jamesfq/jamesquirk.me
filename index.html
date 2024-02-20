@@ -27,6 +27,8 @@
       <li><a class="destination fadeIn" href="#skills">Skills</a></li>
       <li><a>|</a></li>
       <li><a class="destination fadeSlow" href="#development">Development</a></li>
+      <li><a>|</a></li>
+      <li><a class="destination fadeSlow" href="#music">Music</a></li>
     </ul>
 
     <section id="home">
@@ -232,9 +234,7 @@
       <hr>
 
       <h2 id="thisTest">Music</h2>
-
-      <h3 id="thisRes">Doja Cat</h3>
-
+      <p>Some of my favorite songs right now!</p>
       <div id="spotify" class="container containerLeft">
         <div id="code" class="container-item">
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/47362Yh7VtOwx9jSpNssds?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -248,7 +248,26 @@
       </div>
 
     </section>
+
+    <p>Log in to see my top artists in the last four weeks and their top hits!</p>
+
+    <div id="accessInfo" class="container" style="flex-flow: column">
+      <input type="text" id="client_id" class = "accessItem accessInput" placeholder="Client ID">
+      <input type="text" id="client_secret" class = "accessItem accessInput" placeholder="Client Secret">
+      <input type="button" class="myButton accessItem" onclick="requestAuthorization()" value="Login">
+    </div>
+
+    <p>Click below to get started!</p>
+
+    <div id="accessInfo" class="container" style="flex-flow: column">
+      <input type="button" class="myButton" onclick="refreshArtists()" value="Find Artists">
+      <select id="artists" class="accessInput"></select>
+    </div>
     
+    <iframe id="sampleArtist" style="border-radius:12px" src="" width="100%" height="0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <p>Thanks for checking me out.</p>
+
     <div class="interestsContainer">
       <div id="github" class="socials container-item">
         <img class="fadeIn" src="assets/images/github.png">
@@ -263,17 +282,6 @@
 
     <!--Links the user back to the top of the page via a hyperlink to the website-->
     <button id="backtotop" class="topButton">Back to top</button>
-
-
-    <input type="text" class="form-control" id="clientId" placeholder="">
-    <input type="text" class="form-control" id="clientSecret" placeholder="">
-    <input type="button" onclick="requestAuthorization()" value="Request Authorization">
-
-    <hr>
-
-    <select id="devices"></select>
-    <input type="button" onclick="refreshDevices()" value="Test">
-    
 
     <script src="assets/stylesheets/functions.js"></script>
 

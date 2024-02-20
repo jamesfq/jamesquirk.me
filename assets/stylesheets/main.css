@@ -432,3 +432,32 @@ hr {
 #code iframe:hover {
 	transform: scale(1.1);
 }
+
+#accessInfo {
+	flex: 0 0 20%;
+	align-items: center;
+}
+
+
+
+#accessInfo .accessItem {
+	margin: 2px;
+}
+
+#accessInfo .accessInput {
+	width: 25%;
+	margin: 2px;
+
+	border: 2px solid #005204;
+
+	/* handle button size */
+	padding: 10px 20px;
+	border-radius: 10px;
+
+	/* handle text */
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+  
+	transition: all 0.3s ease-in-out;  
+}
