@@ -144,3 +144,11 @@ targets.forEach((target) => {
 
 //     observer.observe(imageContainer);
 // });
+
+
+const thisTest = document.getElementById("thisTest")
+const artist = document.getElementById("thisRes")
+
+thisTest.addEventListener("click", () => {
+    artist.textContent = "Test"
+});

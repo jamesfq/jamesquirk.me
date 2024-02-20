@@ -418,3 +418,17 @@ hr {
 	opacity: 1;
 	
 }
+
+#spotify {
+	flex: 0 0 20%
+}
+
+#spotify iframe {
+	width: 30vw;
+	height: auto;
+	transition: all 0.2s ease-in-out;
+}
+
+#code iframe:hover {
+	transform: scale(1.1);
+}
