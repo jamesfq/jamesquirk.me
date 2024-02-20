@@ -195,6 +195,16 @@ table {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.containerLeft {
+	transform: translateX(-100px);
+}
+
+.containerRight {
+	transform: translateX(100px);
 }
 
 .container-item {
@@ -401,4 +411,10 @@ hr {
 
 .socials img:hover {
 	transform: scale(1.1);
+}
+
+.container.scrollIn {
+	transform: translateX(0);
+	opacity: 1;
+	
 }

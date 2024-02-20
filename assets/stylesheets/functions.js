@@ -101,3 +101,46 @@ const instagram = document.getElementById("instagram")
 instagram.addEventListener("click", () => {
     window.open("https://www.instagram.com/jfquirk?igsh=OGQ5ZDc2ODk2ZA==", '_blank');
 });
+
+
+let targets = document.querySelectorAll('.container');
+
+const options = {
+    root: null, // viewport
+    rootMargin: "0px",
+    threshold: 0.1, // 10% of the target element must be visible
+};
+
+let callback = (entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scrollIn');
+        }
+
+        else {
+            entry.target.classList.remove('scrollIn');
+        }
+    });
+}
+
+let observer = new IntersectionObserver(callback, options);
+
+targets.forEach((target) => {
+    observer.observe(target);
+});
+
+// imageContainers.forEach((imageContainer) => {
+//     const observer = new IntersectionObserver((entries) => {
+//         entries.forEach((entry) => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('scrollIn');
+//             }
+
+//             else {
+//                 entry.target.classList.remove('scrollIn');
+//             }
+//         });
+//     }, options);
+
+//     observer.observe(imageContainer);
+// });
