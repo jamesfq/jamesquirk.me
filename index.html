@@ -18,60 +18,191 @@
     <!--Places my name at the top of the page in the h1 font as specified in CSS-->
 
     <ul class="navigation">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#aboutMe">About</a></li>
-      <li><a href="#workEd">Work & Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#development">Development</a></li>
+      <li><a class="destination fadeIn" style="font-weight: bold" href="#home">Home</a></li>
+      <li><a>|</a></li>
+      <li><a class="destination fadeSlow" href="#aboutMe">About</a></li>
+      <li><a>|</a></li>
+      <li><a class="destination fadeFast" href="#workEd">Work & Education</a></li>
+      <li><a>|</a></li>
+      <li><a class="destination fadeIn" href="#skills">Skills</a></li>
+      <li><a>|</a></li>
+      <li><a class="destination fadeSlow" href="#development">Development</a></li>
     </ul>
 
     <section id="home">
       <hr>
 
-      <h1>James Quirk</h1>
-      <p>james.f.quirk.25@dartmouth.edu</p>
-      <p>Little Rock, AR</p>
+      <h1 class="fadeFast">James Quirk</h1>
+      <p class="fadeSlow">james.f.quirk.25@dartmouth.edu</p>
+      <p class="fadeSlow">Little Rock, AR</p>
 
       <!--Creates an object that corresponds to the storage of two images-->
       <!--Inspired by https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
-      <div class="container">
-          <img class="container-item images" src="assets/images/me.png" style="width:45%">
-          <img class="container-item images" src="assets/images/me3.png" style="width:45%">
-      </div>
+      <img class="images fadeIn glow" src="assets/images/me.png" style="width:45%">
     </section>
     
     <!--Creates sub-headers for each section of my bio-->
     <section id="aboutMe">
       <hr>
 
-      <h2>About Me!</h2>
-      <p>Hey! My name is James Quirk, and I'm originally from Little Rock, Arkansas, but I also lived in Park City, Utah, when I was in elementary and middle school. I love skiing, playing chess, and spending time with my bunny Belinda.</p>
-      
+      <h2>About Me!</h2>      
       <!--Includes an image of me playing chess-->
-      <img class="images" src="assets/images/chess.png" style="width:100%">
+      <div class="interestsContainer">
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeIn" src="assets/images/chess.png">
+          <div class="interestsText"><hr>I love chess! My peak online rating is 2014, placing me in the top 0.2% of players. This picture was taken at a tournament I won in 2022.</div>  
+        </div>
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeFast" src="assets/images/me3.png">
+          <div class="interestsText"><hr>I'm an avid skier. I grew up ski racing, nordic skiing, and (briefly) ski jumping. I'm a member of the Dartmouth Alpine Club Ski Team</div>
+        </div>
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeSlow" src="assets/images/bunny.png">
+          <div class="interestsText"><hr>I love animals! Especially my pet bunny Belinda, who is 11 years old. I also have two dogs named Pumpkin and Trekka.</div>  
+        </div>
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeFast" src="assets/images/travel.png">
+          <div class="interestsText"><hr>Traveling is another one of my passions. Last year, I studied abroad in France and went to Japan for the first time, stopping in Tokyo, Hakone, Hiroshima, and Kyoto.</div>  
+        </div>
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeSlow" src="assets/images/canoe.png">
+          <div class="interestsText"><hr>When I'm not studying, I love the outdoors: hiking, biking, ice skating, and swimming. I was also on First-Year Trips Directorate last year.</div>  
+        </div>
+        <div id="interest" class="wrapper">
+          <img class="interestsImage images fadeIn" src="assets/images/family.png">
+          <div class="interestsText"><hr>My family is very important to me. They've inspired my neverending love for learning! My brother is studying Sociology at UW and my sister (not pictured) is starting at American Law this fall.</div>  
+        </div>
+      </div>
     </section>
 
     <section id="workEd">
       <hr>
 
       <h2>Work and Education</h2>
-      <p>I attended Bentonville High School, where I graduated in 2021 in the top 1% of my class as a National AP Scholar and National Merit Scholar. I'm a sophomore at Dartmouth College majoring in Engineering Sciences and Computer Science with and minoring in French. I have worked as an engineering intern at the Cold Regions Research Lab in Hanover since January, 2022, specializing in surface characterization.</p> 
       
-      <img class="images" src="assets/images/work.png" style="width:100%">
-  
-      <p>You can look at my recognition for my research <a id="research">here</a>.</p>
+      <div class="container">
+        <div class="container-item">
+          <p>I graduated from <a style="font-weight: bold">Bentonville High School</a> in 2021 in the <a style="font-weight: bold">Top 1%</a> of my class as a <a style="font-weight: bold">National AP Scholar</a> and <a style="font-weight: bold">National Merit Scholar</a>. I was also recognized in the Arkansas Times as a member of the <a id="allStar" class="inTextLink">2021 Arkansas Academic All-Star</a> team.
+        </div>
+        <div class="container-item glow">
+          <img class="interestsImage images fadeIn" src="assets/images/bhs.png">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container-item glow">
+          <img class="interestsImage images fadeIn" src="assets/images/dartmouth.png">
+        </div>
+        <div class="container-item">
+          <p>I'm a member of the Class of 2025 at <a style="font-weight: bold">Dartmouth College</a> majoring in <a style="font-weight: bold">Computer Engineering</a> with a minor in <a style="font-weight: bold">French</a>. On campus, I'm a French Drill Instructor, a TA in the Thayer School of Engineering (<a id="engs23" class="inTextLink">ENGS 23</a>), a DCSI fellow, and a member of the Club Ski Team.</p> 
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container-item">
+          <p>I spent the summer of 2022 working full-time as an engineering intern at the US Army Corps of Engineers <a style="font-weight: bold">Cold Regions Research and Engineering Laboratory</a>, where I now work part-time. My research focuses on materials science, specifically with respect to the behavior of aluminum surfaces in cold environments. You can check out my recognition for my research <a id="research" class="inTextLink">here</a>.</p>
+        </div>
+        <div class="container-item glow">
+          <img class="interestsImage images fadeIn" src="assets/images/work.png">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container-item glow">
+          <img class="interestsImage images fadeIn" src="assets/images/river.png">
+        </div>
+        <div class="container-item">
+          <p>This fall, I was selected by the Dartmouth Center for Social Impact to be the <a id="uvcif" class="inTextLink">Class of 1982 Upper Valley Community Impact Fellow</a>. Through my fellowship, I will work full-time with the <a style="font-weight: bold">Connecticut River Conservancy</a> this spring to promote extended producer responsibility legislation in the state of New Hampshire.</p> 
+        </div>
+      </div>
+      
+      <hr>
     </section>
 
     <section id="skills">
       <hr>
 
       <h2>Skills</h2>
+      <h3>Languages</h3>
+      <div id="languageContainer" class="interestsContainer">
+        <div id="language" class="container-item">
+          <p>English: Native</p>
+          <img class="fadeIn" src="assets/images/america.png">
+        </div>
+        <div id="language" class="container-item">
+          <p>French: Fluent</p>
+          <img class="fadeFast" src="assets/images/france.png">
+        </div>
+        <div id="language" class="container-item">
+          <p>Japanese: Beginner</p>
+          <img class="fadeSlow" src="assets/images/japan.png">
+        </div>
+      </div>
+      
+      <hr>
 
-      <p>I'm proficient in the coding languages Python, Java, Bash, and C. I am also conversationally fluent in French and completed Dartmouth's beginner track in Japanese. I've also spent my fair share of time in the clouds as a pilot! I earned my Private Pilot's License when I was 17 years old.</p>
-          
-      <img class="images" src="assets/images/plane.png" style="width:100%">
+      <h3>Coding</h3>
+      <div class="interestsContainer">
+        <div id="code" class="container-item">
+          <img class="fadeIn" src="assets/images/python.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeFast" src="assets/images/java.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/c.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/git.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/bash.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/html.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/css.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/js.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/matlab.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/vhdl.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeSlow" src="assets/images/tcl.png">
+        </div>
+      </div>
 
-      <p>Here is a video of the first time I flew by myself, back when I was 16 years old!</p>
+      <hr>
+
+      <h3>Design</h3>
+      <div class="interestsContainer">
+        <div id="code" class="container-item">
+          <img class="fadeIn" src="assets/images/sw.png">
+        </div>
+        <div id="code" class="container-item">
+          <img class="fadeFast" src="assets/images/figma.png">
+        </div>
+      </div>
+
+      <hr>
+
+      <h3>Pilot!</h3>
+      <div class="container">
+        <div style="flex: 0.5" class="container-item">
+          <p>I started flying when I went to the municipal airport in my hometown for the first time. I was excited about the innovation of the aircraft and the ability to learn a new skill, so at the age of 14 I began to take lessons. When I was 16, I flew by myself for the first time, and when I turned 17 I earned my <a style="font-weight: bold">Private Pilot's License</a>.
+        </div>
+        <div style="flex: 1" class="container-item glow">
+          <img class="interestsImage images fadeIn" src="assets/images/plane.png">
+        </div>
+      </div>
+
+      <p>Here is a video of the first time I flew by myself, back when I was 16!</p>
       <!--Creates a button that stores a link to my videos-->
       <button id="flight1" class="myButton">Solo Flight</button>
       <br>
@@ -93,9 +224,21 @@
 
       <h2>Development</h2>
 
-      <p>There is nothing I love more than the simultaneous entertainment value and educational value of programming. Computer science provides me with a creative outlet for the ideas of ways to improve society that are constantly bouncing around my head. My favorite aspect of coding is the problem-solving aspect of taking on a new challenge, but it goes beyond learning; it is a means of creating an impact by minimizing inefficiencies or limiting inequity of access to resources through technology, which grows more ubiquitous each day.</p>
+      <p>For me, programming is a source of entertainment and education! Computer science provides me with a creative outlet for my ideas of improvements to society. I love problem-solving, and the creativity that comes with programming is an added bonus!</p>
       <p>I'm excited to be applying for DALI because it allows me to combine my loves for problem-solving and learning with an ability to enact change in a realm beyond Dartmouth.</p>
     </section>
+
+    <div class="interestsContainer">
+      <div id="github" class="socials container-item">
+        <img class="fadeIn" src="assets/images/github.png">
+      </div>
+      <div id="linkedin" class="socials container-item">
+        <img class="fadeFast" src="assets/images/linkedin.png">
+      </div>
+      <div id="instagram" class="socials container-item">
+        <img class="fadeFast" src="assets/images/instagram.png">
+      </div>
+    </div>
 
     <!--Links the user back to the top of the page via a hyperlink to the website-->
     <button id="backtotop" class="topButton">Back to top</button>

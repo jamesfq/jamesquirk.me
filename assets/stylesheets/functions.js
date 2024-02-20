@@ -55,7 +55,7 @@ backToTop.addEventListener("click", () => {
 
 backToTop.addEventListener("transitionend", () => {
     if (backToTop.classList.contains("scrolling")) {
-        window.scrollTo(0,0);
+        window.scroll({top: 0, behavior: 'instant'});
         backToTop.classList.remove("scrolling")
     }
 });
@@ -64,4 +64,40 @@ const research = document.getElementById("research")
 
 research.addEventListener("click", () => {
     window.open("https://engineering.dartmouth.edu/news/dartmouth-interns-gain-research-experience-at-erdcs-cold-regions-research-and-engineering-laboratory", '_blank');
+});
+
+const allStar = document.getElementById("allStar")
+
+allStar.addEventListener("click", () => {
+    window.open("https://arktimes.com/news/cover-stories/2021/05/10/the-2021-arkansas-times-academic-all-star-team", '_blank');
+});
+
+const engs23 = document.getElementById("engs23")
+
+engs23.addEventListener("click", () => {
+    window.open("https://engineering.dartmouth.edu/courses/engs23", '_blank');
+});
+
+const uvcif = document.getElementById("uvcif")
+
+uvcif.addEventListener("click", () => {
+    window.open("https://students.dartmouth.edu/social-impact/programs-initiatives/students/social-sector-career-programs/82-upper-valley-community-impact", '_blank');
+});
+
+const github = document.getElementById("github")
+
+github.addEventListener("click", () => {
+    window.open("https://github.com/jamesfq", '_blank');
+});
+
+const linkedin = document.getElementById("linkedin")
+
+linkedin.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/james-quirk-509486237/", '_blank');
+});
+
+const instagram = document.getElementById("instagram")
+
+instagram.addEventListener("click", () => {
+    window.open("https://www.instagram.com/jfquirk?igsh=OGQ5ZDc2ODk2ZA==", '_blank');
 });
