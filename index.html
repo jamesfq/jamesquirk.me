@@ -14,7 +14,7 @@
     <!--Relations between the CSS file and the JavaScript file (attempted)-->
     <link rel="stylesheet" href="assets/stylesheets/main.css">
   </head>
-  <body>
+  <body onload="onPageLoad()">
     <!--Places my name at the top of the page in the h1 font as specified in CSS-->
 
     <ul class="navigation">
@@ -263,6 +263,17 @@
 
     <!--Links the user back to the top of the page via a hyperlink to the website-->
     <button id="backtotop" class="topButton">Back to top</button>
+
+
+    <input type="text" class="form-control" id="clientId" placeholder="">
+    <input type="text" class="form-control" id="clientSecret" placeholder="">
+    <input type="button" onclick="requestAuthorization()" value="Request Authorization">
+
+    <hr>
+
+    <select id="devices"></select>
+    <input type="button" onclick="refreshDevices()" value="Test">
+    
 
     <script src="assets/stylesheets/functions.js"></script>
 
