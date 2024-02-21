@@ -181,7 +181,7 @@ table {
 	background-color: #00AC10;
 }
 
-#backtotop.scrolling {
+#backtotop.expanding {
 	transition: transform 2s ease-in-out;
 	transform: scale(250) rotate(45deg) translateY(-45%);
 }

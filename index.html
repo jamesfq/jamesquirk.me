@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/stylesheets/main.css">
   </head>
   <body onload="onPageLoad()">
-    <!--Places my name at the top of the page in the h1 font as specified in CSS-->
 
+    <!--Navigation Bar-->
     <ul class="navigation">
       <li><a class="destination fadeIn" style="font-weight: bold" href="#home">Home</a></li>
       <li><a>|</a></li>
@@ -31,15 +31,14 @@
       <li><a class="destination fadeSlow" href="#music">Music</a></li>
     </ul>
 
+    <!--Main page-->
     <section id="home">
       <hr>
 
+      <!--Key details-->
       <h1 class="fadeFast">James Quirk</h1>
       <p class="fadeSlow">james.f.quirk.25@dartmouth.edu</p>
       <p class="fadeSlow">Little Rock, AR</p>
-
-      <!--Creates an object that corresponds to the storage of two images-->
-      <!--Inspired by https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
       <img class="images fadeIn glow" src="assets/images/me.png" style="width:45%">
     </section>
     
@@ -48,28 +47,40 @@
       <hr>
 
       <h2>About Me!</h2>      
-      <!--Includes an image of me playing chess-->
+      <!--Flex box of my interests!-->
       <div class="interestsContainer">
+        
+        <!--Chess-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeIn" src="assets/images/chess.png">
           <div class="interestsText"><hr>I love chess! My peak online rating is 2014, placing me in the top 0.2% of players. This picture was taken at a tournament I won in 2022.</div>  
         </div>
+
+        <!--Skiing-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeFast" src="assets/images/me3.png">
           <div class="interestsText"><hr>I'm an avid skier. I grew up ski racing, nordic skiing, and (briefly) ski jumping. I'm a member of the Dartmouth Alpine Club Ski Team</div>
         </div>
+
+        <!--Animals-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeSlow" src="assets/images/bunny.png">
           <div class="interestsText"><hr>I love animals! Especially my pet bunny Belinda, who is 11 years old. I also have two dogs named Pumpkin and Trekka.</div>  
         </div>
+
+        <!--Travel-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeFast" src="assets/images/travel.png">
           <div class="interestsText"><hr>Traveling is another one of my passions. Last year, I studied abroad in France and went to Japan for the first time, stopping in Tokyo, Hakone, Hiroshima, and Kyoto.</div>  
         </div>
+
+        <!--Outdoors-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeSlow" src="assets/images/canoe.png">
           <div class="interestsText"><hr>When I'm not studying, I love the outdoors: hiking, biking, ice skating, and swimming. I was also on First-Year Trips Directorate last year.</div>  
         </div>
+
+        <!--Family-->
         <div id="interest" class="wrapper">
           <img class="interestsImage images fadeIn" src="assets/images/family.png">
           <div class="interestsText"><hr>My family is very important to me. They've inspired my neverending love for learning! My brother is studying Sociology at UW and my sister (not pictured) is starting at American Law this fall.</div>  
@@ -77,11 +88,13 @@
       </div>
     </section>
 
+    <!--Work and education page-->
     <section id="workEd">
       <hr>
 
       <h2>Work and Education</h2>
       
+      <!--Bentonville High-->
       <div class="container containerLeft">
         <div class="container-item">
           <p>I graduated from <a style="font-weight: bold">Bentonville High School</a> in 2021 in the <a style="font-weight: bold">Top 1%</a> of my class as a <a style="font-weight: bold">National AP Scholar</a> and <a style="font-weight: bold">National Merit Scholar</a>. I was also recognized in the Arkansas Times as a member of the <a id="allStar" class="inTextLink">2021 Arkansas Academic All-Star</a> team.
@@ -91,6 +104,7 @@
         </div>
       </div>
 
+      <!--Dartmouth-->
       <div class="container containerRight">
         <div class="container-item glow">
           <img class="interestsImage images fadeIn" src="assets/images/dartmouth.png">
@@ -100,6 +114,7 @@
         </div>
       </div>
 
+      <!--CRREL-->
       <div class="container containerLeft">
         <div class="container-item">
           <p>I spent the summer of 2022 working full-time as an engineering intern at the US Army Corps of Engineers <a style="font-weight: bold">Cold Regions Research and Engineering Laboratory</a>, where I now work part-time. My research focuses on materials science, specifically with respect to the behavior of aluminum surfaces in cold environments. You can check out my recognition for my research <a id="research" class="inTextLink">here</a>.</p>
@@ -109,6 +124,7 @@
         </div>
       </div>
 
+      <!--CRC-->
       <div class="container containerRight">
         <div class="container-item glow">
           <img class="interestsImage images fadeIn" src="assets/images/river.png">
@@ -117,32 +133,39 @@
           <p>This fall, I was selected by the Dartmouth Center for Social Impact to be the <a id="uvcif" class="inTextLink">Class of 1982 Upper Valley Community Impact Fellow</a>. Through my fellowship, I will work full-time with the <a style="font-weight: bold">Connecticut River Conservancy</a> this spring to promote extended producer responsibility legislation in the state of New Hampshire.</p> 
         </div>
       </div>
-      
       <hr>
     </section>
 
+    <!--Skills page-->
     <section id="skills">
       <hr>
-
       <h2>Skills</h2>
+
+      <!--Languages-->
       <h3>Languages</h3>
       <div id="languageContainer" class="container containerLeft">
+        
+        <!--English-->
         <div id="language" class="container-item">
           <p>English: Native</p>
           <img class="fadeIn" src="assets/images/america.png">
         </div>
+
+        <!--French-->
         <div id="language" class="container-item">
           <p>French: Fluent</p>
           <img class="fadeFast" src="assets/images/france.png">
         </div>
+        
+        <!--Japanese-->
         <div id="language" class="container-item">
           <p>Japanese: Beginner</p>
           <img class="fadeSlow" src="assets/images/japan.png">
         </div>
       </div>
-      
       <hr>
 
+      <!--Coding languages-->
       <h3>Coding</h3>
       <div class="container containerLeft">
         <div id="code" class="container-item">
@@ -179,9 +202,9 @@
           <img class="fadeSlow" src="assets/images/tcl.png">
         </div>
       </div>
-
       <hr>
 
+      <!--Design tools-->
       <h3>Design</h3>
       <div class="container containerLeft">
         <div id="code" class="container-item">
@@ -191,9 +214,9 @@
           <img class="fadeFast" src="assets/images/figma.png">
         </div>
       </div>
-
       <hr>
 
+      <!--Piloting-->
       <h3>Pilot!</h3>
       <div class="container containerLeft">
         <div style="flex: 0.5" class="container-item">
@@ -233,7 +256,7 @@
     <section id="music">
       <hr>
 
-      <h2 id="thisTest">Music</h2>
+      <h2>Music</h2>
       <p>Some of my favorite songs right now!</p>
       <div id="spotify" class="container containerLeft">
         <div id="code" class="container-item">
