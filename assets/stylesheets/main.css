@@ -223,6 +223,7 @@ table {
 }
 
 .navigation {
+	line-height: 40px;
 	z-index: 1;
 	display: flex;
 	flex-flow: row wrap;
@@ -446,7 +447,6 @@ hr {
 
 #accessInfo .accessInput {
 	width: 25%;
-	margin: 2px;
 
 	border: 2px solid #005204;
 
@@ -455,7 +455,29 @@ hr {
 	border-radius: 10px;
 
 	/* handle text */
-	font-size: 16px;
+	font-size: 1.3vw;
+	font-weight: bold;
+	text-transform: uppercase;
+  
+	transition: all 0.3s ease-in-out;  
+}
+
+#accessInfo .myButton {
+	width: 15%;
+	font-size: 1.3vw;
+}
+
+#accessInfo #artists {
+	width: 20%;
+	height: 40px;
+	font-size: 1vw;
+
+	border: 2px solid #005204;
+
+	/* handle button size */
+	padding: 10px 20px;
+	border-radius: 3px;
+
 	font-weight: bold;
 	text-transform: uppercase;
   

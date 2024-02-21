@@ -136,7 +136,7 @@ const artist = document.getElementById("thisRes")
 
 // following tutorial: https://www.youtube.com/watch?v=1vR3m0HupGI&list=LL&index=1&t=693s
 
-var redirect_uri = "http://127.0.0.1:3000/index.html"
+var redirect_uri = "https://jamesfq.github.io/jamesquirk.me/"
 
 var client_id = "";
 var client_secret = "";
