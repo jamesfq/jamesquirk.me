@@ -51,21 +51,20 @@ flight3.addEventListener("click", () => {
 });
 
 // A fun animation when the "back to top" button is clicked!
-const backToTop = document.getElementById("backtotop")
-const scrollingEnd = document.querySelector(".scrolling")
+const topButton = document.getElementById("topButton")
 
 // if it is clicked, start expanding
-backToTop.addEventListener("click", () => {
-    backToTop.classList.toggle("expanding")
+topButton.addEventListener("click", () => {
+    topButton.classList.toggle("expanding")
 });
 
 // once the button is at full size, make the transition instantly 
-backToTop.addEventListener("transitionend", () => {
+topButton.addEventListener("transitionend", () => {
     // This if statement means that we will not scroll back to the top if the transition that just ended was the minimizing of the button again
-    if (backToTop.classList.contains("expanding")) {
+    if (topButton.classList.contains("expanding")) {
         // If expanding happened, scroll to top and remove expanding to make button shrink again
         window.scroll({top: 0, behavior: 'instant'});
-        backToTop.classList.remove("expanding")
+        topButton.classList.remove("expanding")
     }
 });
 

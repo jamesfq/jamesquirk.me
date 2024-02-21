@@ -1,10 +1,25 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* Author: James Quirk */
+/* Date: February 20th, 2024 */
+/* Purpose: Design for the full system! */
 
-   I pulled this from the guide to HTML/CSS that you provided on the application!
+/* 
+* Establishes style for the whole body
 */
+body {
+    background-color: #002202;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	
+	padding: 5px;
+	border: 0;
+	font-size: 16px;
+	font-family: "Courier New", monospace;
+	vertical-align: baseline;
+    text-align: center;
+}
 
+/* Scrolls smoothly */
 html {
 	scroll-behavior: smooth;
 }
@@ -25,7 +40,7 @@ h1 {
 }
 
 /* 
-* Sets the parameters of the header h2 element
+* Slightly smaller than h1
 */
 h2 {
 	margin: 20px;
@@ -38,6 +53,9 @@ h2 {
 	font-weight: bold;
 }
 
+/* 
+* Slightly smaller than h2
+*/
 h3 {
 	margin: 20px;
 	padding: 5px;
@@ -50,8 +68,7 @@ h3 {
 }
 
 /* 
-* Sets the parameters of the header h5 element, but I don't use it as a header.
-* I use this as an asset when I need to write in black text because p is set to write in white.
+* Slightly smaller than h3
 */
 h5{
 	margin: 20px;
@@ -64,128 +81,79 @@ h5{
 }
 
 /* 
-* Sets the color of p
+* Slightly smaller than h5
 */
 p {
-	font-size: 2.1vw;
+	font-size: 1.6vw;
 	color: #EBEBEB;
 }
 
-
-/* 
-* Here, I also attempted to set a background image but despite countless testing, could not figure out how to do it correctly.
-*/
-body {
-	line-height: 1;
-    background-color: #002202;
-    background-image: url("assets/images/background.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-	
-	padding: 5px;
-	border: 0;
-	font-size: 16px;
-	font-family: "Courier New", monospace;
-	vertical-align: baseline;
-    text-align: center;
-}
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+hr {
+	padding:2vw;
+	border: 0px
 }
 
+/* Default appearance of button */
 .myButton {
+	/* Change to click */
+	cursor: pointer;
+
+	/* Colors & getting rid of default border*/
 	background-color: #3EE94B;
 	color: #005204;
 	border: none;
-	cursor: pointer;
 
-	/* handle button size */
+	/* Button size */
 	padding: 10px 20px;
 	border-radius: 10px;
 
-	/* handle text */
+	/* Text size on buttons */
 	font-size: 16px;
 	font-weight: bold;
+
+	/* Stylistic choice */
 	text-transform: uppercase;
   
+	/* Transitions when hovered over or clicked */
 	transition: all 0.3s ease-in-out;  
 
 }
 
-#myName {
-	background-color: rgba(0, 41, 4, 1);
-	color: white;
-	width: 100%;
-	position:sticky;
-	top: 0;
-	border: 10px;
-	padding: 10px;
-}
-
+/* Hover over button */
 .myButton:hover {
 	background-color: #00AC10;
 	transform: scale(1.1);
-	}
-  
+}
+
+/* Clicking button */
 .myButton:active {
 	background-color: #008A0D;
-
 }
 
-.topButton {
+/* Fun animation for "back to top" button */
+#topButton {
 	position: relative;
-	z-index: 2;
-	background-color: #3EE94B;
-	color: #005204;
-	border: none;
-	cursor: pointer;
-
-	/* handle button size */
-	padding: 10px 20px;
-	border-radius: 10px;
-
-	/* handle text */
-	font-size: 16px;
-	font-weight: bold;
-	text-transform: uppercase;
-  
-	transition: all 0.3s ease-in-out;  
-
+	z-index: 2; /* In front of everything else */
+	transform: scale(1) /* Normal size by default */
 }
 
-.topButton:active {
-	background-color: #008A0D;
-
-}
-
-#backtotop {
-	transition: all 0.5s ease-in-out;
-	transform: scale(1)
-}
-
-#backtotop:hover {
+/* Change color, tilt up when hovering */
+#topButton:hover {
 	transform: translateY(-5px);
 	background-color: #00AC10;
 }
 
-#backtotop.expanding {
+/* Take 2 seconds to grow and turn before returning to normal */
+#topButton.expanding {
 	transition: transform 2s ease-in-out;
 	transform: scale(250) rotate(45deg) translateY(-45%);
 }
 
+/* Hides video when button has not yet been clicked */
 .hiddenVideo {
 	display: none
 }
@@ -199,29 +167,35 @@ table {
 	transition: all 1s ease-in-out;
 }
 
+/* When certain containers are not on screen as dictated by Intersection Observer API, they come in from left */
 .containerLeft {
 	transform: translateX(-100px);
 }
 
+/* Others come in from right */
 .containerRight {
 	transform: translateX(100px);
 }
 
+/* All items in a flexbox are equal size with respect to one another */
 .container-item {
 	transition: all 0.2s ease-in-out;
 	flex: 1;
 }
 
+/* An image in a flex box fits its whole block */
 .container-item img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover
 }
 
+/* Sets the size of font within a flexbox */
 .container-item p {
 	padding: 20px;
 }
 
+/* Navigation bar */
 .navigation {
 	line-height: 40px;
 	z-index: 1;
@@ -230,11 +204,12 @@ table {
 	justify-content: center;
 	padding: 20px;
 	background: #002202;
-	position: sticky;
+	position: sticky; /* Doesn't move on screen */
 	top: 0;
 	border: 1px solid #EBEBEB
 }
-  
+
+/* Text in Nav bar acting as buttons details */
 .navigation a {
 	text-decoration: none;
 	padding: 10px;
@@ -244,10 +219,12 @@ table {
 	transition: all 0.2s ease-in;
 }
   
+/* When hovering over a button in Nav, make its background light up */
 .navigation .destination:hover {
 	background: #00AC10;
 }
 
+/* Say we're sending a reader to a link, have the color be different in text */
 .inTextLink {
 	transition: color 0.2s ease-in-out;
 	color: #3EE94B;
@@ -255,20 +232,18 @@ table {
 
 }
 
+/* Make darker when hovered over */
 .inTextLink:hover {
 	color: #00AC10;
 }
 
+/* Even darker when clicked */
 .inTextLink:active {
 	color: #008A0D
 }
 
-hr {
-	padding:2vw;
-	border: 0px
-}
-
-/* https://blog.hubspot.com/website/css-fade-in */
+/* Referenced this website: https://blog.hubspot.com/website/css-fade-in */
+/* Note I have three fade speeds to make the website appear a little more dynamic */
 .fadeIn {
 	animation: fadeIn 1s
 }
@@ -281,31 +256,37 @@ hr {
 	animation: fadeIn 3s
 }
 
+/* Animation for fading */
 @keyframes fadeIn {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
+/* Adds a glow around each image */
 .glow {
 	transition: box-shadow 0.2s ease-in-out;
 	border-radius: 10%;
 }
 
+/* Makes the glow a little brighter */
 .glow:hover {
-	box-shadow: 0 0 10px #009507;
+	box-shadow: 0 0 12% #009507;
 }
 
+/* Glow even brighter when clicked */
 .glow:active {
 	transition: box-shadow 0s ease-in-out;
-	box-shadow: 0 0 15px #00B308;
+	box-shadow: 0 0 15% #00B308;
 }
 
-.interestsContainer {
+/* Flexbox that does not disappear when off-screen */
+.staticContainer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 }
 
+/* The images in my interest section */
 .interestsImage {
 	width: 100%;
 	border-radius: 10%;
@@ -314,22 +295,28 @@ hr {
 	transition: all 0.3s ease-in-out;
 }
 
+/* The text over my interest section images */
 .interestsText {
+	/* Sizing */
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	/* Decor */
 	border-radius: 10%;
 	align-items: center;
 	justify-content: center;
-	background: rgba(0, 0, 0, 0.7);
+
+	opacity: 0; /* By default, invisible */
+	background: rgba(0, 0, 0, 0.7); /* When visible, puts shade over the image to then see text upon */
 	color: #EBEBEB;
-	opacity: 0;
 	transition: all 0.3s ease-in-out;
 }
 
-#interest {
+/* Container of interest text and image */
+.wrapper {
 	position: relative;
 	font-size: 2vw;
 	margin: 10px;
@@ -337,68 +324,51 @@ hr {
 	transition: opacity 0.3s ease-in-out;
 }
 
+/* If hovering over container, give its image a glow and make it bigger */
 .wrapper:hover .interestsImage {
 	transform: scale(1.1);
 	box-shadow: 0 0 10px #009507;
 }
 
+/* Same for the text */
 .wrapper:hover .interestsText {
 	transform: scale(1.1);
 	opacity: 1;
 }
 
-.backgroundImage {
-	background-image: url("/assets/images/work.png");
-	background-size: cover;
-	background-position: left;
-	background-repeat: no-repeat;
-	color: #EBEBEB;
-	padding: 200px;
-	opacity:1;
-  }
-
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-#language {
+/* Set the parameters of the language section */
+.language {
 	margin: 10px;
 	flex: 0 0 20%;
 }
 
-#language img {
+.language img {
 	transition: all 0.2s ease-in-out;
 	width: 20vw;
 	height: auto;
 }
 
-#language img:hover {
+.language img:hover {
     transform: scale(1.1);
 }
 
-#code {
+/* Set similar parameters for the code section */
+.code {
 	margin: 10px;
 	flex: 0 0 8%;
 }
 
-#code img {
+.code img {
 	width: 8vw;
 	height: auto;
 	transition: all 0.2s ease-in-out;
 }
 
-#code img:hover {
+.code img:hover {
 	transform: scale(1.1);
 }
 
-.container-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Unique parameters for social media */
 .socials {
 	margin: 10px;
 	flex: 0 0 1%;
@@ -414,37 +384,45 @@ hr {
 	transform: scale(1.1);
 }
 
+/* For the slide into frame animation */
 .container.scrollIn {
 	transform: translateX(0);
 	opacity: 1;
 	
 }
 
+/* Music section flexbox */
 #spotify {
 	flex: 0 0 20%
 }
 
-#spotify iframe {
+/* Style for my favorite tracks right now */
+.music {
+	margin: 5px;
+}
+
+.music iframe {
 	width: 30vw;
 	height: auto;
 	transition: all 0.2s ease-in-out;
 }
 
-#code iframe:hover {
+.music iframe:hover {
 	transform: scale(1.1);
 }
 
+/* Flexbox for Spotify access */
 #accessInfo {
 	flex: 0 0 20%;
 	align-items: center;
 }
 
-
-
+/* Space between Spotify access input boxes */
 #accessInfo .accessItem {
 	margin: 2px;
 }
 
+/* Sets input size of textboxes */
 #accessInfo .accessInput {
 	width: 25%;
 
@@ -462,24 +440,26 @@ hr {
 	transition: all 0.3s ease-in-out;  
 }
 
+/* Sets size of input buttons */
 #accessInfo .myButton {
 	width: 15%;
 	font-size: 1.3vw;
 }
 
+/* Sets size of dropdown box */
 #accessInfo #artists {
+	/* Size */
 	width: 20%;
 	height: 40px;
 	font-size: 1vw;
 
+	/* Outer details */
 	border: 2px solid #005204;
-
-	/* handle button size */
 	padding: 10px 20px;
 	border-radius: 3px;
 
+	/* Style */
 	font-weight: bold;
 	text-transform: uppercase;
-  
 	transition: all 0.3s ease-in-out;  
 }
