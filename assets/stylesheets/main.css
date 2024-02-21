@@ -270,13 +270,13 @@ hr {
 
 /* Makes the glow a little brighter */
 .glow:hover {
-	box-shadow: 0 0 12% #009507;
+	box-shadow: 0 0 10px #009507;
 }
 
 /* Glow even brighter when clicked */
 .glow:active {
 	transition: box-shadow 0s ease-in-out;
-	box-shadow: 0 0 15% #00B308;
+	box-shadow: 0 0 10px #00B308;
 }
 
 /* Flexbox that does not disappear when off-screen */
