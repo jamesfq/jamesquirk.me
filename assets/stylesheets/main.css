@@ -229,6 +229,7 @@ hr {
 	transition: color 0.2s ease-in-out;
 	color: #3EE94B;
 	font-weight: bold;
+	cursor: pointer;
 
 }
 
